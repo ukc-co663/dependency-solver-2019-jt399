@@ -44,9 +44,9 @@ public class Main {
     String CommandOutput;
         // Could perhaps remove these ArrayLists and work from constraints
       // Arraylist of constraints needing to be installed.
-    positiveCon<String> positiveCon = new ArrayList<String>();
+    PositiveCon<String> positiveCon = new ArrayList<String>();
       // ArrayList of constraints that should never be installed.
-    negativeCon<String> negativeCon = new ArrayList<String>();
+    NegativeCon<String> negativeCon = new ArrayList<String>();
     
     for (Package p : repo) {
       System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
