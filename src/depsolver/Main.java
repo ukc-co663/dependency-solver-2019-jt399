@@ -39,14 +39,14 @@ public class Main {
     // using repo, initial and constraints, compute a solution and print the answer
     
       // ArryaList for holding list of commands used during run of program.
-    private ArrayList<String> CommandList = new ArrayList<String>();
+    ArrayList<String> CommandList = new ArrayList<String>();
       // String variable for building command with name and version.
-    private String CommandOutput;
+    String CommandOutput;
         // Could perhaps remove these ArrayLists and work from constraints
       // Arraylist of constraints needing to be installed.
-    private positiveCon<String> positiveCon = new ArrayList<String>();
+    positiveCon<String> positiveCon = new ArrayList<String>();
       // ArrayList of constraints that should never be installed.
-    private negativeCon<String> negativeCon = new ArrayList<String>();
+    negativeCon<String> negativeCon = new ArrayList<String>();
     
     for (Package p : repo) {
       System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
