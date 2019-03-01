@@ -66,6 +66,8 @@ public class Main {
     
     // Get an element from positive con, see if it exists in repository, install (Will skip if empty)
     // Doesn't take into account different versions, just finds if the name matches. (Name currently only consists of one letter, fix)
+    
+    // ERROR: WHY CAN IT NOT FIND P.GETNAME() P.GETVERSION()
     for(int i = 0; i < PositiveCon.size();)
     {
       String tempPos = "Null";
