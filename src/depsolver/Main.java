@@ -74,6 +74,7 @@ public class Main {
       tempPos = PositiveCon.get(i);
       for (Package P : repo)
       {
+        // if(p.getName().equals(tempPos)) or (p.equals(tempPos))
         if(p.getName() == tempPos)
         {
           CommandOutput = "";
