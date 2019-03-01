@@ -44,9 +44,49 @@ public class Main {
     String CommandOutput;
         // Could perhaps remove these ArrayLists and work from constraints
       // Arraylist of constraints needing to be installed.
-    ArrayList<String> positiveCon = new ArrayList<String>();
+    ArrayList<String> PositiveCon = new ArrayList<String>();
       // ArrayList of constraints that should never be installed.
-    ArrayList<String> negativeCon = new ArrayList<String>();
+    ArrayList<String> NegativeCon = new ArrayList<String>();
+    
+    // For loop to add constraints into positive or negative ArrayList
+    for(int i = 0; i < constraints.size();)
+        {
+            String tempCon = "Null";
+            tempCon = constraints.get(i);
+            if (tempCon.charAt(0) == '+')
+            {
+                PositiveCon.add(Character.toString(tempCon.charAt(1)));
+            }
+            if (tempCon.charAt(0) == '-')
+            {
+                NegativeCon.add(Character.toString(tempCon.charAt(1)));
+            }
+            i++;
+        }
+    
+    // Get an element from positive con, see if it exists in repository, install (Will skip if empty)
+    // Doesn't take into account different versions, just finds if the name matches. (Name currently only consists of one letter, fix)
+    for(int i = 0; i < PositiveCon.size();)
+    {
+      String tempPos = "Null";
+      tempPos = PositiveCon.get(i);
+      for (Package P : repo)
+      {
+        if(p.getName() == tempPos)
+        {
+          CommandOutput = "";
+          CommandOutput += '"';
+          CommandOutput += '+';
+          CommandOutput += p.getName();
+          CommandOutput += '=';
+          CommandOutput += p.getVersion();
+          CommandOutput += '"';
+          
+          CommandList.add(CommandOutput);
+        }
+      }
+      System.out.print(CommandList);
+    }
     
     for (Package p : repo) {
       System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
