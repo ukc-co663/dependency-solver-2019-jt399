@@ -86,7 +86,7 @@ public class Main {
           CommandList.add(CommandOutput);
         }
       
-      //System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
+      System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
       for (List<String> clause : p.getDepends()) {
         System.out.printf("  dep:");
         for (String q : clause) {
