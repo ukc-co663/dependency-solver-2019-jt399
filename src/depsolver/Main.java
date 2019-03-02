@@ -40,9 +40,7 @@ public class Main {
     
       // ArryaList for holding list of commands used during run of program.
     ArrayList<String> CommandList = new ArrayList<String>();
-      // String variable for building command with name and version.
-    String CommandOutput;
-        // Could perhaps remove these ArrayLists and work from constraints
+      // Could perhaps remove these ArrayLists and work from constraints
       // Arraylist of constraints needing to be installed.
     ArrayList<String> PositiveCon = new ArrayList<String>();
       // ArrayList of constraints that should never be installed.
