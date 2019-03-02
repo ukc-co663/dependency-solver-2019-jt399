@@ -70,8 +70,8 @@ public class Main {
     for (Package p : repo) 
     {
       String tempPos = "Null";
-      tempPos = PositiveCon.get(i);
-      currentCon = p.getName();
+      tempPos = "A";
+      String currentCon = p.getName();
       
       if(currentCon == tempPos)
         {
