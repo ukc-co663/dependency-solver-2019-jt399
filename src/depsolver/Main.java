@@ -95,9 +95,8 @@ public class Main {
         System.out.printf("\n");
       }
     }
+    System.out.print(CommandList);
   }
-  
-  System.out.print(CommandList);
 
   static String readFile(String filename) throws IOException {
     BufferedReader br = new BufferedReader(new FileReader(filename));
