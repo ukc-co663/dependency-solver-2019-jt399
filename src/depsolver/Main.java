@@ -74,7 +74,7 @@ public class Main {
       System.out.println(currentCon);
       System.out.println(tempPos);
       
-      if(currentCon.equals('"' + tempPos + '"'))
+      if(currentCon.equals("A"))
         {
           String CommandOutput = "";
         
