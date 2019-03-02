@@ -95,6 +95,8 @@ public class Main {
         System.out.printf("\n");
       }
       System.out.print(CommandList);
+      System.out.print(PositiveCon);
+      System.out.print(NegativeCon);
     }
   }
 
