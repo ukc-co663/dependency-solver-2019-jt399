@@ -77,7 +77,8 @@ public class Main {
       
       if(currentCon == tempPos)
         {
-          CommandOutput = "";
+          String CommandOutput = "";
+        
           CommandOutput += '"';
           CommandOutput += '+';
           CommandOutput += p.getName();
