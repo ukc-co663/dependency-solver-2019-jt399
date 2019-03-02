@@ -73,6 +73,8 @@ public class Main {
       tempPos = "A";
       String currentCon = p.getName();
       
+      System.out.println(currentCon);
+      
       if(currentCon == tempPos)
         {
           CommandOutput = "";
