@@ -72,8 +72,9 @@ public class Main {
       String currentCon = p.getName();
       
       System.out.println(currentCon);
+      System.out.println(tempPos);
       
-      if(currentCon.equals("A"))
+      if(currentCon.equals('"' + tempPos + '"'))
         {
           String CommandOutput = "";
         
