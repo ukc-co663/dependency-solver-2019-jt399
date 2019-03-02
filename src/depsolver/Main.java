@@ -73,7 +73,7 @@ public class Main {
       
       System.out.println(currentCon);
       
-      if(currentCon.equals(A))
+      if(currentCon.equals("A"))
         {
           String CommandOutput = "";
         
