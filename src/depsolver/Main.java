@@ -67,15 +67,13 @@ public class Main {
     // Get an element from positive con, see if it exists in repository, install (Will skip if empty)
     // Doesn't take into account different versions, just finds if the name matches. (Name currently only consists of one letter, fix)
     
-    // ERROR: WHY CAN IT NOT FIND P.GETNAME() P.GETVERSION()
-    for(int i = 0; i < PositiveCon.size();)
+    for (Package p : repo) 
     {
       String tempPos = "Null";
       tempPos = PositiveCon.get(i);
-      for (Package P : repo)
-      {
-        // if(p.getName().equals(tempPos)) or (p.equals(tempPos))
-        if(p.getName() == tempPos)
+      currentCon = p.getName();
+      
+      if(currentCon == tempPos)
         {
           CommandOutput = "";
           CommandOutput += '"';
@@ -87,12 +85,8 @@ public class Main {
           
           CommandList.add(CommandOutput);
         }
-      }
-      System.out.print(CommandList);
-    }
-    
-    for (Package p : repo) {
-      System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
+      
+      //System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
       for (List<String> clause : p.getDepends()) {
         System.out.printf("  dep:");
         for (String q : clause) {
@@ -102,6 +96,8 @@ public class Main {
       }
     }
   }
+  
+  System.out.print(CommandList);
 
   static String readFile(String filename) throws IOException {
     BufferedReader br = new BufferedReader(new FileReader(filename));
