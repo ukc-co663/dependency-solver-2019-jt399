@@ -138,7 +138,7 @@ public class Main {
       System.out.print(ValidPackages);
 	    
       System.out.print(PackageConflicts);
-      System.out.println(PackageConflicts.get("A=2.01"));
+      System.out.println(PackageConflicts.get("C=1"));
     }
   }
 
