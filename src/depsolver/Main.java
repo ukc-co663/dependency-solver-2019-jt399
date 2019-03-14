@@ -109,10 +109,9 @@ public class Main {
       
       //String Test = p.getConflicts();
 	String conflictsSeparated = String.join(",", p.getConflicts());
-	System.out.println(conflictsSeparated);
 
-      //System.out.printf("  cons:");
-      //System.out.printf(" %s", Test);
+      System.out.printf("  cons:");
+      System.out.printf(" %s", conflictsSeparated);
       
       System.out.print(CommandList);
       System.out.print(PositiveCon);
