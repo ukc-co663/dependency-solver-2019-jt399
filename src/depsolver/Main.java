@@ -109,14 +109,14 @@ public class Main {
       
       String conflictsSeparated = String.join(",", p.getConflicts());
 	    
-      if(conflictsSeparated.size() > 0)
+      if(conflictsSeparated.length() > 0)
       {
 	      System.out.printf("  cons:");
       	      System.out.printf(" %s", conflictsSeparated);
               System.out.printf("\n");
       }
 	    
-      if(conflictsSeparated.size() = 0)
+      if(conflictsSeparated.length() = 0)
       {
 	      System.out.printf("  cons:");
       	      System.out.printf(" empty");
