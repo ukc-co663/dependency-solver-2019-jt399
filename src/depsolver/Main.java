@@ -47,6 +47,9 @@ public class Main {
     ArrayList<String> NegativeCon = new ArrayList<String>();
       // ArrayList of valid packages. // ADDED
     ArrayList<String> ValidPackages = new ArrayList<String>();
+	  
+    // HashMap Idea Key/Package, Dependancies
+    HashMap<String, String> packageConflicts = new HashMap<String, String>();
     
     // For loop to add constraints into positive or negative ArrayList
     for(int i = 0; i < constraints.size();)
@@ -111,6 +114,7 @@ public class Main {
 	    
       if(conflictsSeparated.length() > 0)
       {
+	      PackageConflicts.put(packageVersion, conflictsSeparated)
 	      System.out.printf("  cons:");
       	      System.out.printf(" %s", conflictsSeparated);
               System.out.printf("\n");
@@ -131,6 +135,8 @@ public class Main {
       System.out.print(PositiveCon);
       System.out.print(NegativeCon);
       System.out.print(ValidPackages);
+	    
+	    System.out.print(PackageConflicts);
     }
   }
 
