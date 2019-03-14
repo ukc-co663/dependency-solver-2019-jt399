@@ -46,7 +46,7 @@ public class Main {
       // ArrayList of constraints that should never be installed.
     ArrayList<String> NegativeCon = new ArrayList<String>();
       // ArrayList of valid packages. // ADDED
-    ArrayList<String> ValidPackage = new ArrayList<String>();
+    ArrayList<String> ValidPackages = new ArrayList<String>();
     
     // For loop to add constraints into positive or negative ArrayList
     for(int i = 0; i < constraints.size();)
@@ -76,7 +76,7 @@ public class Main {
       // ADDED
       String packageName = p.getName();
       String packageVersion = p.getVersion();
-      ValidPackage.add(packageName + "=" + packageVersion);
+      ValidPackages.add(packageName + "=" + packageVersion);
       
       System.out.println(currentCon);
       System.out.println(tempPos);
@@ -106,7 +106,7 @@ public class Main {
       System.out.print(CommandList);
       System.out.print(PositiveCon);
       System.out.print(NegativeCon);
-      System.out.print(ValidPackage);
+      System.out.print(ValidPackages);
     }
   }
 
