@@ -107,11 +107,25 @@ public class Main {
         System.out.printf("\n");
       }
       
-      //String Test = p.getConflicts();
-	String conflictsSeparated = String.join(",", p.getConflicts());
-
-      System.out.printf("  cons:");
-      System.out.printf(" %s", conflictsSeparated);
+      String conflictsSeparated = String.join(",", p.getConflicts());
+      
+      if(p.getconflicts().size() = 0)
+      {
+         System.out.printf("  cons:");
+	 System.out.printf("no conflicts");
+	 System.out.printf("\n");
+      }
+	    
+      if(p.getconflicts().size() > 0)
+      {
+         System.out.printf("  cons:");
+	 System.out.printf(" %s", conflictsSeparated);
+	 System.out.printf("\n");
+      }
+	    
+      //System.out.printf("  cons:");
+      //System.out.printf(" %s", conflictsSeparated);
+      //System.out.printf("\n");
       
       System.out.print(CommandList);
       System.out.print(PositiveCon);
