@@ -115,7 +115,7 @@ public class Main {
 	    
       if(conflictsSeparated.length() > 0)
       {
-	      PackageConflicts.put(packageName + "=" + packageVersion, ": " + conflictsSeparated);
+	      PackageConflicts.put(packageName + "=" + packageVersion, conflictsSeparated);
 	      System.out.printf("  cons:");
       	      System.out.printf(" %s", conflictsSeparated);
               System.out.printf("\n");
@@ -138,7 +138,7 @@ public class Main {
       System.out.print(ValidPackages);
 	    
       System.out.print(PackageConflicts);
-      System.out.println(PackageConflicts.get("C=1"));
+      System.out.println(PackageConflicts.get("B=3.2"));
     }
   }
 
