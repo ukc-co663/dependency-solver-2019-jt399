@@ -96,25 +96,20 @@ public class Main {
         }
       
       System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
+	    
       for (List<String> clause : p.getDepends()) 
-	    {
+      {
         System.out.printf("  deps:");
         for (String q : clause) 
-		    {
+	{
         System.out.printf(" %s", q);
         }
         System.out.printf("\n");
       }
       
-      for (String conf : p.getConflicts()) 
-	    {
-        System.out.printf("  cons:");
-        for (String r : conf) 
-		    {
-          System.out.printf(" %s", r);
-        }
-        System.out.printf("\n");
-      }
+      String Test = p.getConflicts();
+      System.out.printf("  cons:");
+      System.out.printf(" %s", Test);
       
       System.out.print(CommandList);
       System.out.print(PositiveCon);
