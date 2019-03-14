@@ -106,7 +106,7 @@ public class Main {
         System.out.printf("\n");
       }
       
-      for (<String> conf : p.getConflicts()) 
+      for (conf : p.getConflicts()) 
 	    {
         System.out.printf("  cons:");
         for (String r : conf) 
