@@ -50,7 +50,7 @@ public class Main {
     ArrayList<String> ValidPackages = new ArrayList<String>();
 	  
     // HashMap Idea Key/Package, Dependancies
-    HashMap<String, String> packageConflicts = new HashMap<String, String>();
+    HashMap<String, String> PackageConflicts = new HashMap<String, String>();
     
     // For loop to add constraints into positive or negative ArrayList
     for(int i = 0; i < constraints.size();)
