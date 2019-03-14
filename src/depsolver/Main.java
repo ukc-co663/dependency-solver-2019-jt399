@@ -108,19 +108,19 @@ public class Main {
       }
       
       String conflictsSeparated = String.join(",", p.getConflicts());
-      
-      if(p.getconflicts().size() = 0)
+	    
+      if(conflictsSeparated.size() > 0)
       {
-         System.out.printf("  cons:");
-	 System.out.printf("no conflicts");
-	 System.out.printf("\n");
+	      System.out.printf("  cons:");
+      	      System.out.printf(" %s", conflictsSeparated);
+              System.out.printf("\n");
       }
 	    
-      if(p.getconflicts().size() > 0)
+      if(conflictsSeparated.size() = 0)
       {
-         System.out.printf("  cons:");
-	 System.out.printf(" %s", conflictsSeparated);
-	 System.out.printf("\n");
+	      System.out.printf("  cons:");
+      	      System.out.printf(" empty");
+              System.out.printf("\n");
       }
 	    
       //System.out.printf("  cons:");
