@@ -108,7 +108,7 @@ public class Main {
       }
       
       //String Test = p.getConflicts();
-	String conflictsSeparated = String.join(",", conflicts);
+	String conflictsSeparated = String.join(",", p.getConflicts);
 	System.out.println(conflictsSeparated);
 
       //System.out.printf("  cons:");
