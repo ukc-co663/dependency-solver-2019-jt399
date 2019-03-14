@@ -116,7 +116,7 @@ public class Main {
               System.out.printf("\n");
       }
 	    
-      if(conflictsSeparated.length() = 0)
+      if(conflictsSeparated.length() == 0)
       {
 	      System.out.printf("  cons:");
       	      System.out.printf(" empty");
