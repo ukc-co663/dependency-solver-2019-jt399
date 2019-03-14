@@ -114,7 +114,7 @@ public class Main {
 	    
       if(conflictsSeparated.length() > 0)
       {
-	      PackageConflicts.put(packageVersion, conflictsSeparated)
+	      PackageConflicts.put(packageVersion, conflictsSeparated);
 	      System.out.printf("  cons:");
       	      System.out.printf(" %s", conflictsSeparated);
               System.out.printf("\n");
