@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
+import java.util.Stack;
 
 class Package {
   private String name;
@@ -51,6 +52,13 @@ public class Main {
 	  
     // HashMap Idea Key/Package, Dependancies
     HashMap<String, String> PackageConflicts = new HashMap<String, String>();
+	  
+    // Stack for possible solution path.
+    Stack<String> PossiblePath = new Stack<>();
+    // Stack for possible solution path.
+    ArrayList<String> PreviousPaths = new ArrayList<String>();
+    // String for storing what path I am trying.
+    String CurrentPath = "Null";
     
     // For loop to add constraints into positive or negative ArrayList
     for(int i = 0; i < constraints.size();)
