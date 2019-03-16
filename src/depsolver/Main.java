@@ -100,23 +100,24 @@ public class Main {
 	    
       for (List<String> clause : p.getDepends()) 
       {
-	String depsBuilder = "";
+	PackageDeps.clear();
+	//String depsBuilder = "";
         //System.out.printf("  deps:");
         for (String q : clause) 
 	{
 	   //depsBuilder += q;
 	   //System.out.printf(" %s", q); // What does it have
-	   PackageDeps.add(depsBuilder);
-	   depsBuilder += '|';
+	   PackageDeps.add(q);
+	   //depsBuilder += '|';
            //PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
-	depsBuilder = "";
+	//depsBuilder = "";
 	//PackageDeps.add(">");
-	//listList.add(PackageDeps);
+	listList.add(PackageDeps);
 	//PackageDeps.clear();
         System.out.println(PackageDeps);	 
-	//System.out.println(listList);	
+	System.out.println(listList);	
         System.out.printf("\n");
       }
       
