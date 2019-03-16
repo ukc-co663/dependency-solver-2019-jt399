@@ -105,6 +105,7 @@ public class Main {
 	   depsBuilder += q;
 	   //System.out.printf(" %s", q); // What does it have
 	   PackageDeps.add(depsBuilder);
+	   depsBuilder += '|';
            //PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
