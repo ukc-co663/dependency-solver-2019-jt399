@@ -193,19 +193,15 @@ public class Main {
    int Counter = 0;
    // Used to find index.
    int Index = 0;	
-	  
-   System.out.println(PositiveCons.size()); // DOES IT GET HERE
+	  E
    if(PositiveCons.size() > 0)
    {
 	for(int j = 0; j < PositiveCons.size(); j++)
 	{
 		posConFind = PositiveCons.get(j);
-		System.out.println(posConFind); // DOES IT GET HERE
 		for (int i = 0; i < PackageNames.size(); i++) 
                 {
                    String pacName = PackageNames.get(i);
-	           System.out.println(posConFind);
-	           System.out.println(pacName);
                    if(posConFind.equals(pacName))
                    {
                     	Counter ++;
