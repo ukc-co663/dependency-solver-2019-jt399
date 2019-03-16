@@ -196,36 +196,32 @@ public class Main {
    System.out.println(PositiveCons.size()); // DOES IT GET HERE
    if(PositiveCons.size() > 0)
    {
-       for(int j = 0; j < PositiveCons.size(); j++)
+	for(int j = 0; j < PositiveCons.size(); j++)
 	{
-	    posConFind = PositiveCons.get(j);
-	    System.out.println(posConFind); // DOES IT GET HERE
-	    if(PackageNames.contains(posConFind))
-	    {
-	        for (int k = 0; k < PackageNames.size(); k++) 
-                {
-                    String pacName = PackageNames.get(k);
-		    System.out.println(pacName); // DOES IT GET HERE
-                    if(posConFind == "A")
-                    {
-                        Counter ++;
-                        Index ++;
-                        System.out.println("Found: " + posConFind + " at index: "+ Index);
-                        IndexCount.add(Index);
-                    }
-                }
-        
-                for (int l = 0; l < IndexCount.size(); l++) 
-                {
-                    int pacIndex = IndexCount.get(l);
-                    System.out.println("Package: " + Packages.get(pacIndex));
-                }
-        
-                //System.out.println(Counter);
-                //System.out.println(IndexCount);
-	        }
-	   }
-    }
+		posConFind = PositiveCons.get(j);
+		System.out.println(posConFind); // DOES IT GET HERE
+		for (int k = 0; k < PackageNames.size(); k++) 
+		{
+			String pacName = PackageNames.get(k);
+			System.out.println(pacName); // DOES IT GET HERE
+			if(posConFind == pacName)
+			{
+				Counter ++;
+				Index ++;
+				System.out.println("Found: " + posConFind + " at index: "+ Index);
+				IndexCount.add(Index);
+			}
+		}
+
+		for (int l = 0; l < IndexCount.size(); l++) 
+		{
+			int pacIndex = IndexCount.get(l);
+			System.out.println("Package: " + Packages.get(pacIndex));
+		}
+		//System.out.println(Counter);
+		//System.out.println(IndexCount);
+	}
+}
 	  
 	  
       System.out.println(Packages);
