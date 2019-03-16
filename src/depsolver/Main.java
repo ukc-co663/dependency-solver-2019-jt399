@@ -123,6 +123,7 @@ public class Main {
 	  
 	  
     // USED TO SORT OUT INITIAL
+    // IF INITIAL HAS ELEMENTS, COMPARE THESE TO PACKAGES, IF THEY EXIST, ADD TO INSTALLED PACKAGES.
     if(initial.size() > 0)
     {
 	for(int i = 0; i < initial.size(); i++)
