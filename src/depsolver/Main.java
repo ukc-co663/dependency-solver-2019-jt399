@@ -98,9 +98,10 @@ public class Main {
 	    
       for (List<String> clause : p.getDepends()) 
       {
-        System.out.printf("  deps:");
+        //System.out.printf("  deps:");
         for (String q : clause) 
 	{
+	   System.out.println(q); // What does it have
            PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
@@ -112,16 +113,16 @@ public class Main {
       if(conflictsSeparated.length() > 0)
       {
 	      PackageConflicts.put(packageName + "=" + packageVersion, conflictsSeparated);
-	      System.out.printf("  cons:");
-      	      System.out.printf(" %s", conflictsSeparated);
-              System.out.printf("\n");
+	      //System.out.printf("  cons:");
+      	      //System.out.printf(" %s", conflictsSeparated);
+              //System.out.printf("\n");
       }
 	    
       if(conflictsSeparated.length() == 0)
       {
-	      System.out.printf("  cons:");
-      	      System.out.printf(" empty");
-              System.out.printf("\n");
+	      //System.out.printf("  cons:");
+      	      //System.out.printf(" empty");
+              //System.out.printf("\n");
       }
     }
 	  
