@@ -121,14 +121,15 @@ public class Main {
               System.out.printf("\n");
       }
     }
-      System.out.print(Packages);
-      System.out.print(PackageNames);	    
+      System.out.println(Packages);
+      System.out.println(PackageNames);	    
       //System.out.printf("  cons:");
       //System.out.printf(" %s", conflictsSeparated);
       //System.out.printf("\n");
       //System.out.print(CommandList);
-      //System.out.print(PositiveCon);
-      //System.out.print(NegativeCon);
+      System.out.println(constraints);
+      System.out.println(PositiveCon);
+      System.out.println(NegativeCon);
       //System.out.print(ValidPackages);   
       //System.out.print(PackageConflicts);
       //System.out.println(PackageConflicts.get("B=3.2"));
