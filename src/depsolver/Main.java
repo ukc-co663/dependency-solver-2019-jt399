@@ -114,7 +114,7 @@ public class Main {
 	   {
 	       PackageDeps.add("*");
 	   }
-           PackageDep.add(packageName, q);
+           PackageDep.put(packageName, q);
 	   PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
@@ -123,7 +123,7 @@ public class Main {
 	listList.add(PackageDeps);
 	//PackageDeps.clear();
         System.out.println(PackageDeps);
-        System.out.println(PackageDep);
+        //System.out.println(PackageDep);
 	System.out.println(listList);	
         System.out.printf("\n");
       }
