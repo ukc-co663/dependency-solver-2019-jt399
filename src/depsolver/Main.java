@@ -102,12 +102,12 @@ public class Main {
       {
 	PackageDeps = new ArrayList<String>();
         //System.out.printf("  deps:");
-	if(q.equals(""))
+        for (String q : clause) 
+	{
+	   if(q.equals(null))
 	   {
 	       PackageDeps.add("*");
 	   }
-        for (String q : clause) 
-	{
 	   PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
