@@ -100,6 +100,10 @@ public class Main {
 	    
       for (List<String> clause : p.getDepends()) 
       {
+	if(p.isNull("depends"))
+	{
+	    PackageDeps.add("*");
+	}
 	PackageDeps = new ArrayList<String>();
         //System.out.printf("  deps:");
         for (String q : clause) 
