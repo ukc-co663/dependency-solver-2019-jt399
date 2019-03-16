@@ -265,20 +265,17 @@ public class Main {
 		    
 		if(PackageDependancies.get(indexPackage) == null)
 		{
-			if(PackageDependancies.get(indexPackage) == null)
-		        {
-				finished = true;
-				
-				InstalledPackages.add(indexPackage);
-				CommandOutput = "";
-                
-				CommandOutput += '"';
-				CommandOutput += '+';
-				CommandOutput += indexPackage;
-				CommandOutput += '"';
-				CommandList.add(CommandOutput);
-				System.out.print(CommandList);
-			}
+			finished = true;
+
+			InstalledPackages.add(indexPackage);
+			CommandOutput = "";
+
+			CommandOutput += '"';
+			CommandOutput += '+';
+			CommandOutput += indexPackage;
+			CommandOutput += '"';
+			CommandList.add(CommandOutput);
+			System.out.println(CommandList);
 		}
             }
 	}
