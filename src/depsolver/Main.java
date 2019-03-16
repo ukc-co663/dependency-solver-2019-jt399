@@ -230,7 +230,7 @@ public class Main {
                    String pacName = PackageNames.get(i);
                    if(posConFind.equals(pacName))
                    {
-                        System.out.println("Found: " + posConFind + " at index: "+ Index);
+                        //System.out.println("Found: " + posConFind + " at index: "+ Index);
                         IndexCount.add(Index);
 			Counter ++;
                         Index ++;
@@ -240,7 +240,7 @@ public class Main {
         for (int i = 0; i < IndexCount.size(); i++) 
         {
             int pacIndex = IndexCount.get(i);
-            System.out.println("Package: " + Packages.get(pacIndex));
+            //System.out.println("Package: " + Packages.get(pacIndex));
         }
 		//System.out.println(Counter);
 		//System.out.println(IndexCount);
@@ -256,7 +256,7 @@ public class Main {
                 int pacIndex = IndexCount.get(a);
                 //PackageDependancies.get(pacIndex);
 		//System.out.println(pacIndex);
-		System.out.println(Packages.get(pacIndex));
+		//System.out.println(Packages.get(pacIndex));
 		String indexPackage = Packages.get(pacIndex);
 		String packDep = PackageDependancies.get(indexPackage);
 		    
@@ -299,10 +299,10 @@ public class Main {
       //System.out.println(constraints);
       //System.out.println(PositiveCons);
       //System.out.println(NegativeCons);
-      System.out.println(IndexCount);
+      //System.out.println(IndexCount);
       //System.out.print(ValidPackages);   
-      System.out.println(PackageConflicts);
-      System.out.println(PackageDependancies);
+      //System.out.println(PackageConflicts);
+      //System.out.println(PackageDependancies);
       //System.out.println(PackageDeps);
   }
 
