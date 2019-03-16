@@ -95,6 +95,7 @@ public class Main {
     String CommandOutput = "";
     
     String packageName = "";
+    String packageVersion = "";
 	 
 	  
     boolean finished = false;
@@ -102,7 +103,7 @@ public class Main {
     for (Package p : repo) 
     {
       packageName = p.getName();
-      String packageVersion = p.getVersion();
+      packageVersion = p.getVersion();
       Packages.add(packageName + "=" + packageVersion);
       PackageNames.add(packageName);
       
@@ -118,7 +119,7 @@ public class Main {
 	   {
 	       PackageDeps.add("*");
 	   }
-           PackageDependancies.put(packageName, q);
+           PackageDependancies.put(packageName + "=" + packageVersion, q);
 	   PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
@@ -239,10 +240,10 @@ public class Main {
                         Index ++;
                     }
                  }
-        // pacIndex is current package we have installed.
-        for (int i = 0; i < IndexCount.size(); i++) 
+        // pacIndex is current package we have at index 0. (took out better parts due to time limit).
+        if (IndexCount.size() > 0) 
         {
-            int pacIndex = IndexCount.get(i);
+            int pacIndex = IndexCount.get(0);
             System.out.println("Package: " + Packages.get(pacIndex));
         }
 		//System.out.println(Counter);
