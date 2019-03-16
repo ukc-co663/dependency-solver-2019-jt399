@@ -83,6 +83,13 @@ public class Main {
 
     // ArryaList for holding list of commands used during run of program.
     ArrayList<String> CommandList = new ArrayList<String>();
+	  
+    // Used for finding positive constraints.
+    String posConFind = "";
+    // Counter.
+    int Counter = 0;
+    // Used to find index.
+    int Index = 0;
     
     for (Package p : repo) 
     {
@@ -163,7 +170,7 @@ public class Main {
                     }
                     j++;
                 }
-                PositiveCon.add(putTogether);
+                PositiveCons.add(putTogether);
                 putTogether = "";
             }
             if (tempCon.charAt(0) == '-')
@@ -181,7 +188,7 @@ public class Main {
                     }
                     j++;
                 }
-                NegativeCon.add(putTogether);
+                NegativeCons.add(putTogether);
                 putTogether = "";
             }
             i++;
