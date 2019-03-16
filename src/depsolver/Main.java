@@ -141,6 +141,7 @@ public class Main {
 	      //System.out.printf("  cons:");
       	      //System.out.printf(" %s", conflictsSeparated);
               //System.out.printf("\n");
+	      System.out.println(PackageConflicts.get("A=1"));
       }
 	    
       if(conflictsSeparated.length() == 0)
