@@ -120,8 +120,9 @@ public class Main {
       	      System.out.printf(" empty");
               System.out.printf("\n");
       }
-	
-      //System.out.print(Packages);	    
+    }
+      System.out.print(Packages);
+      System.out.print(PackageNames);	    
       //System.out.printf("  cons:");
       //System.out.printf(" %s", conflictsSeparated);
       //System.out.printf("\n");
@@ -131,8 +132,6 @@ public class Main {
       //System.out.print(ValidPackages);   
       //System.out.print(PackageConflicts);
       //System.out.println(PackageConflicts.get("B=3.2"));
-    }
-      System.out.print(Packages);
   }
 
   static String readFile(String filename) throws IOException {
