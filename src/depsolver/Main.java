@@ -199,6 +199,7 @@ public class Main {
        for(int j = 0; j < PositiveCons.size(); j++)
 	{
 	    posConFind = PositiveCons.get(j);
+	    System.out.println(posConFind); // DOES IT GET HERE
 	    if(PackageNames.contains(posConFind))
 	    {
 	        for (int k = 0; k < PackageNames.size(); k++) 
