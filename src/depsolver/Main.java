@@ -76,7 +76,7 @@ public class Main {
     Stack<String> PossiblePath = new Stack<>();
 
     // Package names.
-    private ArrayList<String> PreviousPaths = new ArrayList<String>();
+    ArrayList<String> PreviousPaths = new ArrayList<String>();
 
     // ArryaList for holding list of commands used during run of program.
     ArrayList<String> CommandList = new ArrayList<String>();
