@@ -100,7 +100,7 @@ public class Main {
 	    
       for (List<String> clause : p.getDepends()) 
       {
-	PackageDeps.removeAll();
+	PackageDeps = new ArrayList<String>();
 	//String depsBuilder = "";
         //System.out.printf("  deps:");
         for (String q : clause) 
