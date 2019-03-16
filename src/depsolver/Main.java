@@ -258,9 +258,9 @@ public class Main {
       System.out.println(NegativeCons);
       System.out.println(IndexCount);
       //System.out.print(ValidPackages);   
-      System.out.print(PackageConflicts);
+      System.out.println(PackageConflicts);
       System.out.println(PackageDependancies);
-      System.out.println(PackageDeps);
+      //System.out.println(PackageDeps);
   }
 
   static String readFile(String filename) throws IOException {
