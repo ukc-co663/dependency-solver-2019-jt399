@@ -112,7 +112,7 @@ public class Main {
            //System.out.printf(" %s", q);
         }
 	listList.add(PackageDeps);
-	PackageDeps.clear();
+	//PackageDeps.clear();
         System.out.println(PackageDeps);	 
 	System.out.println(listList);	
         //System.out.printf("\n");
