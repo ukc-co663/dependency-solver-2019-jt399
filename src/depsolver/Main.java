@@ -206,7 +206,7 @@ public class Main {
                    String pacName = PackageNames.get(i);
 	           System.out.println(posConFind);
 	           System.out.println(pacName);
-                   if(posConFind == pacName)
+                   if(posConFind.equals(pacName))
                    {
                     	Counter ++;
                         Index ++;
