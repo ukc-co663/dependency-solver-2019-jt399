@@ -243,19 +243,38 @@ public class Main {
         }
 		//System.out.println(Counter);
 		//System.out.println(IndexCount);
+     }
+	   
+	   
+	 
+	   
+	if(!IndexCount.isEmpty())
+	{
+	    for (int a = 0; a < IndexCount.size(); a++) 
+            {
+                int pacIndex = IndexCount.get(i);
+                //PackageDependancies.get(pacIndex);
+		System.out.println(PackageDependancies.get(pacIndex));
+            }
 	}
+        // FIND ALL PACKAGES WITH NAME OF POSITIVECONS
+	// GET ALL THE PACKAGES
+	   // FOR PACKAGELIST.SIZE() GET A PACKAGE
+	// DOES THIS PACKAGE HAVE DEPENDANCIES
+	// IF NO, DOES THIS PACKAGE HAVE CONFLICTS
+	// IF NO, INSTALL
 }
 	  
 	  
-      System.out.println(Packages);
-      System.out.println(PackageNames);	    
+      //System.out.println(Packages);
+      //System.out.println(PackageNames);	    
       //System.out.printf("  cons:");
       //System.out.printf(" %s", conflictsSeparated);
       //System.out.printf("\n");
       //System.out.print(CommandList);
-      System.out.println(constraints);
-      System.out.println(PositiveCons);
-      System.out.println(NegativeCons);
+      //System.out.println(constraints);
+      //System.out.println(PositiveCons);
+      //System.out.println(NegativeCons);
       System.out.println(IndexCount);
       //System.out.print(ValidPackages);   
       System.out.println(PackageConflicts);
