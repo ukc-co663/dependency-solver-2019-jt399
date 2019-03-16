@@ -235,6 +235,7 @@ public class Main {
       System.out.println(constraints);
       System.out.println(PositiveCons);
       System.out.println(NegativeCons);
+      System.out.println(Index);
       //System.out.print(ValidPackages);   
       //System.out.print(PackageConflicts);
       //System.out.println(PackageConflicts.get("B=3.2"));
