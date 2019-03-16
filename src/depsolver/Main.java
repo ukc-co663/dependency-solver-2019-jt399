@@ -252,7 +252,7 @@ public class Main {
 	{
 	    for (int a = 0; a < IndexCount.size(); a++) 
             {
-                int pacIndex = IndexCount.get(i);
+                int pacIndex = IndexCount.get(a);
                 //PackageDependancies.get(pacIndex);
 		System.out.println(PackageDependancies.get(pacIndex));
             }
