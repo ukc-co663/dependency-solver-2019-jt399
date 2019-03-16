@@ -111,6 +111,7 @@ public class Main {
            //PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
+	PackageDeps.add(">");
 	//listList.add(PackageDeps);
 	//PackageDeps.clear();
         System.out.println(PackageDeps);	 
