@@ -60,7 +60,7 @@ public class Main {
     // Package dependancies.
     ArrayList<String> PackageDeps = new ArrayList<String>();	
     // Package dependancies list of lists.
-    private List<List> listList = new ArrayList<List>();	  
+    List<List> listList = new ArrayList<List>();	  
 	  
     // Counting index for finding versions.
     ArrayList<Integer> IndexCount = new ArrayList<Integer>();
