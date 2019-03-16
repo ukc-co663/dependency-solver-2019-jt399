@@ -58,7 +58,7 @@ public class Main {
     ArrayList<String> PackageNames = new ArrayList<String>();
 
     // Package dependancies.
-    ArrayList<String> PackageDeps = new ArrayList<String>()	  
+    ArrayList<String> PackageDeps = new ArrayList<String>();	  
 	  
     // Counting index for finding versions.
     ArrayList<Integer> IndexCount = new ArrayList<Integer>();
