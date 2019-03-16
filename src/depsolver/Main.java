@@ -47,6 +47,9 @@ public class Main {
     ArrayList<String> Packages = new ArrayList<String>();
     // length of packages.
     String PackageLength = Packages.toString();
+	  
+    // HashMap Idea Key/Package, Dependancies
+    HashMap<String, String> PackageConflicts = new HashMap<String, String>();
 
     // ArrayList of valid packages.
     ArrayList<String> ValidPackages = new ArrayList<String>();
