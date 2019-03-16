@@ -121,7 +121,6 @@ public class Main {
 	   }
            PackageDependancies.put(packageName + "=" + packageVersion, q);
 	   PackageDeps.add(q);
-	   System.out.println(PackageDependancies.get("A=1"));
            //System.out.printf(" %s", q);
         }
 	//depsBuilder = "";
@@ -268,6 +267,7 @@ public class Main {
       System.out.println(PackageConflicts);
       System.out.println(PackageDependancies);
       //System.out.println(PackageDeps);
+      System.out.println(PackageDependancies.get("A=1"));
   }
 
   static String readFile(String filename) throws IOException {
