@@ -101,7 +101,7 @@ public class Main {
         //System.out.printf("  deps:");
         for (String q : clause) 
 	{
-	   System.out.println(q); // What does it have
+	   System.out.printf(" %s", q); // What does it have
            PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
