@@ -204,10 +204,10 @@ public class Main {
                    String pacName = PackageNames.get(i);
                    if(posConFind.equals(pacName))
                    {
-                    	Counter ++;
-                        Index ++;
                         System.out.println("Found: " + posConFind + " at index: "+ Index);
                         IndexCount.add(Index);
+			Counter ++;
+                        Index ++;
                     }
                  }
         
