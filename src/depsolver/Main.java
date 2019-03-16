@@ -125,9 +125,9 @@ public class Main {
     // USED TO SORT OUT INITIAL
     if(initial.size() > 0)
     {
-	for(i = 0; i < initial.size(); i++)
+	for(int i = 0; i < initial.size(); i++)
 	{
-	    String initialFind = intial.get(i);
+	    String initialFind = initial.get(i);
 	    if(Packages.contains(initialFind))
 	    {
 	        InstalledPackages.add(initialFind);
