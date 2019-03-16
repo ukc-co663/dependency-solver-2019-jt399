@@ -193,7 +193,7 @@ public class Main {
             }
             i++;
         }
-	  
+   System.out.println(PositiveCons.size()); // DOES IT GET HERE
    if(PositiveCons.size() > 0)
    {
        for(int j = 0; j < PositiveCons.size(); j++)
