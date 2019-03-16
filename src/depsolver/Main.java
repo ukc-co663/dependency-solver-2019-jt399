@@ -47,9 +47,11 @@ public class Main {
     ArrayList<String> Packages = new ArrayList<String>();
     // length of packages.
     String PackageLength = Packages.toString();
-	  
+
+    // HashMap Idea Key/Package, Conflicts
+    HashMap<String, String> PackageCon = new HashMap<String, String>();
     // HashMap Idea Key/Package, Dependancies
-    HashMap<String, String> PackageConflicts = new HashMap<String, String>();
+    HashMap<String, String> PackageDep = new HashMap<String, String>();
 
     // ArrayList of valid packages.
     ArrayList<String> ValidPackages = new ArrayList<String>();
@@ -108,6 +110,7 @@ public class Main {
 	   {
 	       PackageDeps.add("*");
 	   }
+           PackageDep.add(p.getName, q);
 	   PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
@@ -115,7 +118,8 @@ public class Main {
 	//PackageDeps.add(">");
 	listList.add(PackageDeps);
 	//PackageDeps.clear();
-        System.out.println(PackageDeps);	 
+        System.out.println(PackageDeps);
+        System.out.println(PackageDep);
 	System.out.println(listList);	
         System.out.printf("\n");
       }
