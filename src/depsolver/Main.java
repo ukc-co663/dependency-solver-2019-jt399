@@ -123,10 +123,10 @@ public class Main {
 	//PackageDeps.add(">");
 	listList.add(PackageDeps);
 	//PackageDeps.clear();
-        System.out.println(PackageDeps);
+        //System.out.println(PackageDeps);
         //System.out.println(PackageDep);
-	System.out.println(listList);	
-        System.out.printf("\n");
+	//System.out.println(listList);	
+        //System.out.printf("\n");
       }
       
       String conflictsSeparated = String.join(",", p.getConflicts());
