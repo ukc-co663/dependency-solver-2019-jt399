@@ -64,10 +64,10 @@ public class Main {
     ArrayList<String> Constraints = new ArrayList<String>();
 
     // Arraylist of constraints needing to be installed.
-    ArrayList<String> PositiveCon = new ArrayList<String>();
+    ArrayList<String> PositiveCons = new ArrayList<String>();
 
     // ArrayList of constraints that should never be installed.
-    ArrayList<String> NegativeCon = new ArrayList<String>();
+    ArrayList<String> NegativeCons = new ArrayList<String>();
 	  
     // List of installed packages
     ArrayList<String> InstalledPackages = new ArrayList<String>();
@@ -189,14 +189,14 @@ public class Main {
 	  
    if(PositiveCons.size() > 0)
    {
-       for(int i = 0; i < PositiveCons.size(); i++)
+       for(int j = 0; j < PositiveCons.size(); j++)
 	{
-	    String posConFind = PositiveCons.get(i);
+	    String posConFind = PositiveCons.get(j);
 	    if(PackageNames.contains(posConFind))
 	    {
-	        for (int i = 0; i < PackageNames.size(); i++) 
+	        for (int k = 0; k < PackageNames.size(); k++) 
                 {
-                    String pacName = PackageNames.get(i);
+                    String pacName = PackageNames.get(k);
                     if(posConfind == pacName)
                     {
                         Counter ++;
@@ -206,9 +206,9 @@ public class Main {
                     }
                 }
         
-                for (int i = 0; i < IndexCount.size(); i++) 
+                for (int l = 0; l < IndexCount.size(); l++) 
                 {
-                    int pacIndex = IndexCount.get(i);
+                    int pacIndex = IndexCount.get(l);
                     System.out.println("Package: " + Packages.get(pacIndex));
                 }
         
@@ -226,8 +226,8 @@ public class Main {
       //System.out.printf("\n");
       //System.out.print(CommandList);
       System.out.println(constraints);
-      System.out.println(PositiveCon);
-      System.out.println(NegativeCon);
+      System.out.println(PositiveCons);
+      System.out.println(NegativeCons);
       //System.out.print(ValidPackages);   
       //System.out.print(PackageConflicts);
       //System.out.println(PackageConflicts.get("B=3.2"));
