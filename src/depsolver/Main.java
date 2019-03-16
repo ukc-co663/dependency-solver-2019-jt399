@@ -198,13 +198,13 @@ public class Main {
    {
        for(int j = 0; j < PositiveCons.size(); j++)
 	{
-	    String posConFind = PositiveCons.get(j);
+	    posConFind = PositiveCons.get(j);
 	    if(PackageNames.contains(posConFind))
 	    {
 	        for (int k = 0; k < PackageNames.size(); k++) 
                 {
                     String pacName = PackageNames.get(k);
-                    if(posConfind == pacName)
+                    if(posConFind == pacName)
                     {
                         Counter ++;
                         Index ++;
