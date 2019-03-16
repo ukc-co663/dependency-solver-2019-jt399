@@ -187,6 +187,37 @@ public class Main {
             i++;
         }
 	  
+   if(PositiveCons.size() > 0)
+   {
+       for(int i = 0; i < PositiveCons.size(); i++)
+	{
+	    String posConFind = PositiveCons.get(i);
+	    if(PackageNames.contains(posConFind))
+	    {
+	        for (int i = 0; i < PackageNames.size(); i++) 
+                {
+                    String pacName = PackageNames.get(i);
+                    if(posConfind == pacName)
+                    {
+                        Counter ++;
+                        Index ++;
+                        System.out.println("Found: " + posConFind + " at index: "+ Index);
+                        IndexCount.add(Index);
+                    }
+                }
+        
+                for (int i = 0; i < IndexCount.size(); i++) 
+                {
+                    int pacIndex = IndexCount.get(i);
+                    System.out.println("Package: " + Packages.get(pacIndex));
+                }
+        
+                //System.out.println(Counter);
+                //System.out.println(IndexCount);
+	        }
+	   }
+    }
+	  
 	  
       System.out.println(Packages);
       System.out.println(PackageNames);	    
