@@ -101,9 +101,9 @@ public class Main {
       for (List<String> clause : p.getDepends()) 
       {
 	PackageDeps = new ArrayList<String>();
-	if(p.getDepends() == empty)
+	if(p.getDepends().isEmpty())
 	{
-	    PackageDeps.add('*');
+	    PackageDeps.add("*");
 	}
         //System.out.printf("  deps:");
         for (String q : clause) 
