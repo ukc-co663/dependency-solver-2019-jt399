@@ -101,7 +101,7 @@ public class Main {
       for (List<String> clause : p.getDepends()) 
       {
 	PackageDeps = new ArrayList<String>();
-	if(p.getDepends().isEmpty())
+	if(!p.isNull("clause"))
 	{
 	    PackageDeps.add("*");
 	}
