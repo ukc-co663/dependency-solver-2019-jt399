@@ -58,7 +58,9 @@ public class Main {
     ArrayList<String> PackageNames = new ArrayList<String>();
 
     // Package dependancies.
-    ArrayList<String> PackageDeps = new ArrayList<String>();	  
+    ArrayList<String> PackageDeps = new ArrayList<String>();	
+    // Package dependancies list of lists.
+    private List<List> listList = new ArrayList<List>();	  
 	  
     // Counting index for finding versions.
     ArrayList<Integer> IndexCount = new ArrayList<Integer>();
@@ -109,7 +111,10 @@ public class Main {
            //PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
-        System.out.println(PackageDeps.get(1));	      
+	listList.add(PackageDeps);
+	PackageDeps.clear();
+        System.out.println(PackageDeps.get(1));	 
+	System.out.println(listList);	
         //System.out.printf("\n");
       }
       
