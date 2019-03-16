@@ -254,8 +254,30 @@ public class Main {
             {
                 int pacIndex = IndexCount.get(a);
                 //PackageDependancies.get(pacIndex);
-		System.out.println(pacIndex);
+		//System.out.println(pacIndex);
 		System.out.println(Packages.get(pacIndex));
+		String indexPackage = Packages.get(pacIndex);
+		String packDep = PackageDependancies.get(indexPackage)
+		    
+		if(PackageDependancies.get(indexPackage) == null)
+		{
+			if(PackageDependancies.get(indexPackage) == null)
+		        {
+				InstalledPackages.add(indexPackage);
+				CommandOutput = "";
+                
+				CommandOutput += '"';
+				CommandOutput += '+';
+				CommandOutput += indexPackage;
+				CommandOutput += '"';
+				CommandList.add(CommandOutput);
+				System.out.print(CommandList);
+			}
+		}
+		else
+		{
+			//
+		}
             }
 	}
         // FIND ALL PACKAGES WITH NAME OF POSITIVECONS
