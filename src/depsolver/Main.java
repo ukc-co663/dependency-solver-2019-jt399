@@ -86,7 +86,6 @@ public class Main {
     
     for (Package p : repo) 
     {
-      // ADDED
       String packageName = p.getName();
       String packageVersion = p.getVersion();
       Packages.add(packageName + "=" + packageVersion);
@@ -121,6 +120,24 @@ public class Main {
               System.out.printf("\n");
       }
     }
+	  
+	  
+    // USED TO SORT OUT INITIAL
+    if(initial.size() > 0)
+    {
+	for(i = 0; i < initial.size(); i++)
+	{
+	    String initialFind = intial.get(i);
+	    if(Packages.contains(initialFind))
+	    {
+	        InstalledPackages.add(initialFind);
+	    }
+	}
+    }
+	  
+    // USED TO SORT CONSTRAINTS INTO POSITIVE OR NEGATIVE (+ OR -)
+    // REMINDER: + MEANS ONE OF THESE MUST BE INSTALLED.
+    //           - MEANS NONE OF THESE MUST BE INSTALLED.
     for(int i = 0; i < constraints.size();)
         {
             String tempCon = "Null";
