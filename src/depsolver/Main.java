@@ -254,6 +254,7 @@ public class Main {
             {
                 int pacIndex = IndexCount.get(a);
                 //PackageDependancies.get(pacIndex);
+		System.out.println(pacIndex);
 		System.out.println(PackageDependancies.get(pacIndex));
             }
 	}
