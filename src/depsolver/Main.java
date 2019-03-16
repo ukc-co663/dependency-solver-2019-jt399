@@ -40,8 +40,13 @@ public class Main {
     // CHANGE CODE BELOW:
     // using repo, initial and constraints, compute a solution and print the answer
     
+    // List of valid initial
+    ArrayList<String> ValidInitial = new ArrayList<String>();
+	  
     // List of packages.
     private ArrayList<String> Packages = new ArrayList<String>();
+    // length of packages.
+    String PackageLength = Packages.toString();
 
     // ArrayList of valid packages.
     ArrayList<String> ValidPackages = new ArrayList<String>();
@@ -60,7 +65,10 @@ public class Main {
 
     // ArrayList of constraints that should never be installed.
     ArrayList<String> NegativeCon = new ArrayList<String>();
-
+	  
+    // List of installed packages
+    ArrayList<String> InstalledPackages = new ArrayList<String>();
+	  
     // Path currently taking.
     String CurrentPath = "Null";
 
@@ -73,54 +81,15 @@ public class Main {
     // ArryaList for holding list of commands used during run of program.
     ArrayList<String> CommandList = new ArrayList<String>();
     
-    // For loop to add constraints into positive or negative ArrayList
-    for(int i = 0; i < constraints.size();)
-        {
-            String tempCon = "Null";
-            tempCon = constraints.get(i);
-            if (tempCon.charAt(0) == '+')
-            {
-                PositiveCon.add(Character.toString(tempCon.charAt(1)));
-            }
-            if (tempCon.charAt(0) == '-')
-            {
-                NegativeCon.add(Character.toString(tempCon.charAt(1)));
-            }
-            i++;
-        }
-    
-    // Get an element from positive con, see if it exists in repository, install (Will skip if empty)
-    // Doesn't take into account different versions, just finds if the name matches. (Name currently only consists of one letter, fix)
-    
     for (Package p : repo) 
     {
-      String tempPos = "Null";
-      tempPos = "A";
-      String currentCon = p.getName();
-      
       // ADDED
       String packageName = p.getName();
       String packageVersion = p.getVersion();
-      ValidPackages.add(packageName + "=" + packageVersion);
+      Packages.add(packageName + "=" + packageVersion);
+      PackageNames.add(packageName);
       
-      System.out.println(currentCon);
-      System.out.println(tempPos);
-      
-      if(currentCon.equals("A"))
-        {
-          String CommandOutput = "";
-        
-          CommandOutput += '"';
-          CommandOutput += '+';
-          CommandOutput += p.getName();
-          CommandOutput += '=';
-          CommandOutput += p.getVersion();
-          CommandOutput += '"';
-          
-          CommandList.add(CommandOutput);
-        }
-      
-      System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
+      //System.out.printf("package %s version %s\n", p.getName(), p.getVersion());
 	    
       for (List<String> clause : p.getDepends()) 
       {
@@ -148,16 +117,15 @@ public class Main {
       	      System.out.printf(" empty");
               System.out.printf("\n");
       }
-	    
+	
+      System.out.print(Packages);	    
       //System.out.printf("  cons:");
       //System.out.printf(" %s", conflictsSeparated);
       //System.out.printf("\n");
-      
       //System.out.print(CommandList);
       //System.out.print(PositiveCon);
       //System.out.print(NegativeCon);
-      //System.out.print(ValidPackages);
-	    
+      //System.out.print(ValidPackages);   
       //System.out.print(PackageConflicts);
       //System.out.println(PackageConflicts.get("B=3.2"));
     }
