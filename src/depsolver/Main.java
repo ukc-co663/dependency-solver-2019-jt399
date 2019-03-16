@@ -121,6 +121,55 @@ public class Main {
               System.out.printf("\n");
       }
     }
+    for(int i = 0; i < constraints.size();)
+        {
+            String tempCon = "Null";
+            tempCon = constraints.get(i);
+            
+            char charCheck = 'a';
+            String putTogether = "";
+            // initialise to name
+            String currentCheck = "name";
+            if (tempCon.charAt(0) == '+')
+            {
+                for (int j = 1; j < tempCon.length();)
+                {
+                    charCheck = tempCon.charAt(j);
+                    // currentCheck needed to prevent illegal combinations or usage of name, operators, or version.
+                    if(charCheck >= 'a' && charCheck <= 'z' 
+                    || charCheck >= 'A' && charCheck <= 'Z')
+                    {
+                        putTogether += (Character.toString(charCheck));
+                        currentCheck = "name";
+                        // goes through the name of the package and sets it into putTogether which will give details for the package.
+                    }
+                    j++;
+                }
+                PositiveCon.add(putTogether);
+                putTogether = "";
+            }
+            if (tempCon.charAt(0) == '-')
+            {
+                for (int j = 1; j < tempCon.length();)
+                {
+                    charCheck = tempCon.charAt(j);
+                    // currentCheck needed to prevent illegal combinations or usage of name, operators, or version.
+                    if(charCheck >= 'a' && charCheck <= 'z' 
+                    || charCheck >= 'A' && charCheck <= 'Z')
+                    {
+                        putTogether += (Character.toString(charCheck));
+                        currentCheck = "name";
+                        // goes through the name of the package and sets it into putTogether which will give details for the package.
+                    }
+                    j++;
+                }
+                NegativeCon.add(putTogether);
+                putTogether = "";
+            }
+            i++;
+        }
+	  
+	  
       System.out.println(Packages);
       System.out.println(PackageNames);	    
       //System.out.printf("  cons:");
