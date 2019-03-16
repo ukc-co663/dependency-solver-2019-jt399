@@ -44,7 +44,7 @@ public class Main {
     ArrayList<String> ValidInitial = new ArrayList<String>();
 	  
     // List of packages.
-    private ArrayList<String> Packages = new ArrayList<String>();
+    ArrayList<String> Packages = new ArrayList<String>();
     // length of packages.
     String PackageLength = Packages.toString();
 
@@ -52,10 +52,10 @@ public class Main {
     ArrayList<String> ValidPackages = new ArrayList<String>();
 
     // Package names.
-    private ArrayList<String> PackageNames = new ArrayList<String>();
+    ArrayList<String> PackageNames = new ArrayList<String>();
 
     // Counting index for finding versions.
-    private ArrayList<Integer> IndexCount = new ArrayList<Integer>();
+    ArrayList<Integer> IndexCount = new ArrayList<Integer>();
 
     // Arraylist of constraints.
     ArrayList<String> Constraints = new ArrayList<String>();
