@@ -100,18 +100,14 @@ public class Main {
 	    
       for (List<String> clause : p.getDepends()) 
       {
-	if(p.getDepends() == null)
-	{
-	    PackageDeps.add("*");
-	}
 	PackageDeps = new ArrayList<String>();
         //System.out.printf("  deps:");
-        for (String q : clause) 
-	{
-	   if(q.equals(""))
+	if(q.equals(""))
 	   {
 	       PackageDeps.add("*");
 	   }
+        for (String q : clause) 
+	{
 	   PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
