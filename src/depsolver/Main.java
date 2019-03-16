@@ -113,7 +113,7 @@ public class Main {
         }
 	listList.add(PackageDeps);
 	PackageDeps.clear();
-        System.out.println(PackageDeps.get(1));	 
+        System.out.println(PackageDeps);	 
 	System.out.println(listList);	
         //System.out.printf("\n");
       }
