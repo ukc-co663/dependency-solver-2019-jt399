@@ -40,25 +40,38 @@ public class Main {
     // CHANGE CODE BELOW:
     // using repo, initial and constraints, compute a solution and print the answer
     
-      // ArryaList for holding list of commands used during run of program.
-    ArrayList<String> CommandList = new ArrayList<String>();
-      // Could perhaps remove these ArrayLists and work from constraints
-      // Arraylist of constraints needing to be installed.
-    ArrayList<String> PositiveCon = new ArrayList<String>();
-      // ArrayList of constraints that should never be installed.
-    ArrayList<String> NegativeCon = new ArrayList<String>();
-      // ArrayList of valid packages. // ADDED
+    // List of packages.
+    private ArrayList<String> Packages = new ArrayList<String>();
+
+    // ArrayList of valid packages.
     ArrayList<String> ValidPackages = new ArrayList<String>();
-	  
-    // HashMap Idea Key/Package, Dependancies
-    HashMap<String, String> PackageConflicts = new HashMap<String, String>();
-	  
-    // Stack for possible solution path.
-    Stack<String> PossiblePath = new Stack<>();
-    // Stack for possible solution path.
-    ArrayList<String> PreviousPaths = new ArrayList<String>();
-    // String for storing what path I am trying.
+
+    // Package names.
+    private ArrayList<String> PackageNames = new ArrayList<String>();
+
+    // Counting index for finding versions.
+    private ArrayList<Integer> IndexCount = new ArrayList<Integer>();
+
+    // Arraylist of constraints.
+    ArrayList<String> Constraints = new ArrayList<String>();
+
+    // Arraylist of constraints needing to be installed.
+    ArrayList<String> PositiveCon = new ArrayList<String>();
+
+    // ArrayList of constraints that should never be installed.
+    ArrayList<String> NegativeCon = new ArrayList<String>();
+
+    // Path currently taking.
     String CurrentPath = "Null";
+
+    // Stack for commands taken.
+    Stack<String> PossiblePath = new Stack<>();
+
+    // Package names.
+    private ArrayList<String> PreviousPaths = new ArrayList<String>();
+
+    // ArryaList for holding list of commands used during run of program.
+    ArrayList<String> CommandList = new ArrayList<String>();
     
     // For loop to add constraints into positive or negative ArrayList
     for(int i = 0; i < constraints.size();)
@@ -140,13 +153,13 @@ public class Main {
       //System.out.printf(" %s", conflictsSeparated);
       //System.out.printf("\n");
       
-      System.out.print(CommandList);
-      System.out.print(PositiveCon);
-      System.out.print(NegativeCon);
-      System.out.print(ValidPackages);
+      //System.out.print(CommandList);
+      //System.out.print(PositiveCon);
+      //System.out.print(NegativeCon);
+      //System.out.print(ValidPackages);
 	    
-      System.out.print(PackageConflicts);
-      System.out.println(PackageConflicts.get("B=3.2"));
+      //System.out.print(PackageConflicts);
+      //System.out.println(PackageConflicts.get("B=3.2"));
     }
   }
 
