@@ -121,6 +121,7 @@ public class Main {
 	   }
            PackageDependancies.put(packageName + "=" + packageVersion, q);
 	   PackageDeps.add(q);
+	   System.out.println(PackageDependancies.get("A=1"));
            //System.out.printf(" %s", q);
         }
 	//depsBuilder = "";
@@ -141,7 +142,6 @@ public class Main {
 	      //System.out.printf("  cons:");
       	      //System.out.printf(" %s", conflictsSeparated);
               //System.out.printf("\n");
-	      System.out.println(PackageConflicts.get("A=1"));
       }
 	    
       if(conflictsSeparated.length() == 0)
