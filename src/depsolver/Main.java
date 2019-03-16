@@ -114,7 +114,7 @@ public class Main {
 	   {
 	       PackageDeps.add("*");
 	   }
-           PackageDep.put(packageName, q);
+           PackageDependancies.put(packageName, q);
 	   PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
@@ -259,7 +259,7 @@ public class Main {
       System.out.println(IndexCount);
       //System.out.print(ValidPackages);   
       System.out.print(PackageConflicts);
-      //System.out.println(PackageConflicts.get("B=3.2"));
+      System.out.println(PackageDependancies);
       System.out.println(PackageDeps);
   }
 
