@@ -200,7 +200,7 @@ public class Main {
 	{
 	    posConFind = PositiveCons.get(j);
 	    System.out.println(posConFind); // DOES IT GET HERE
-	    if(PackageNames.contains(posConFind))
+	    if(PackageNames.contains("A"))
 	    {
 	        for (int k = 0; k < PackageNames.size(); k++) 
                 {
