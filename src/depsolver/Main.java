@@ -257,7 +257,7 @@ public class Main {
 		//System.out.println(pacIndex);
 		System.out.println(Packages.get(pacIndex));
 		String indexPackage = Packages.get(pacIndex);
-		String packDep = PackageDependancies.get(indexPackage)
+		String packDep = PackageDependancies.get(indexPackage);
 		    
 		if(PackageDependancies.get(indexPackage) == null)
 		{
