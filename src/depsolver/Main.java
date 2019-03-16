@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Stack;
-import java.util.Objects;
 
 class Package {
   private String name;
@@ -101,7 +100,7 @@ public class Main {
 	    
       for (List<String> clause : p.getDepends()) 
       {
-	if(p.isNull("depends"))
+	if(p.getDepends() == null)
 	{
 	    PackageDeps.add("*");
 	}
