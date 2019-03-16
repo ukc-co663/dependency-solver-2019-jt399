@@ -49,9 +49,9 @@ public class Main {
     String PackageLength = Packages.toString();
 
     // HashMap Idea Key/Package, Conflicts
-    HashMap<String, String> PackageCon = new HashMap<String, String>();
+    HashMap<String, String> PackageConflicts = new HashMap<String, String>();
     // HashMap Idea Key/Package, Dependancies
-    HashMap<String, String> PackageDep = new HashMap<String, String>();
+    HashMap<String, String> PackageDependancies = new HashMap<String, String>();
 
     // ArrayList of valid packages.
     ArrayList<String> ValidPackages = new ArrayList<String>();
@@ -59,6 +59,8 @@ public class Main {
     // Package names.
     ArrayList<String> PackageNames = new ArrayList<String>();
 
+    // Package conflicts.
+    ArrayList<String> PackageCons = new ArrayList<String>();	
     // Package dependancies.
     ArrayList<String> PackageDeps = new ArrayList<String>();	
     // Package dependancies list of lists.
@@ -91,9 +93,11 @@ public class Main {
     // ArryaList for holding list of commands used during run of program.
     ArrayList<String> CommandList = new ArrayList<String>();
     
+    String packageName = "";
+	  
     for (Package p : repo) 
     {
-      String packageName = p.getName();
+      packageName = p.getName();
       String packageVersion = p.getVersion();
       Packages.add(packageName + "=" + packageVersion);
       PackageNames.add(packageName);
@@ -110,7 +114,7 @@ public class Main {
 	   {
 	       PackageDeps.add("*");
 	   }
-           PackageDep.add(p.getName, q);
+           PackageDep.add(packageName, q);
 	   PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
@@ -254,7 +258,7 @@ public class Main {
       System.out.println(NegativeCons);
       System.out.println(IndexCount);
       //System.out.print(ValidPackages);   
-      //System.out.print(PackageConflicts);
+      System.out.print(PackageConflicts);
       //System.out.println(PackageConflicts.get("B=3.2"));
       System.out.println(PackageDeps);
   }
