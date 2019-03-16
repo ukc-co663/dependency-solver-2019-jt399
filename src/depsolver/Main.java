@@ -57,6 +57,9 @@ public class Main {
     // Package names.
     ArrayList<String> PackageNames = new ArrayList<String>();
 
+    // Package dependancies.
+    ArrayList<String> PackageDeps = new ArrayList<String>()	  
+	  
     // Counting index for finding versions.
     ArrayList<Integer> IndexCount = new ArrayList<Integer>();
 
@@ -98,9 +101,10 @@ public class Main {
         System.out.printf("  deps:");
         for (String q : clause) 
 	{
-        System.out.printf(" %s", q);
+           PackageDeps.add(q);
+           //System.out.printf(" %s", q);
         }
-        System.out.printf("\n");
+        //System.out.printf("\n");
       }
       
       String conflictsSeparated = String.join(",", p.getConflicts());
@@ -235,6 +239,7 @@ public class Main {
       //System.out.print(ValidPackages);   
       //System.out.print(PackageConflicts);
       //System.out.println(PackageConflicts.get("B=3.2"));
+      System.out.println(PackageDeps);
   }
 
   static String readFile(String filename) throws IOException {
