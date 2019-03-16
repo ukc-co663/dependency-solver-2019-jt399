@@ -317,6 +317,7 @@ public class Main {
       *   The idea was to try and follow what I list below in comments. (The very bottom).
       *   I really struggled to utilise github so ended up doing most of my work on paper and Eclipse to test things.
       *   Ontop of this, I have been cripplingly sick and have struggled to work on this project, despite the hours I have put into it.
+      *   I managed to produce over 40 pieces of paper detailing specifics of how it could work, with all the fringe cases, but in the end I was unable to translate it here.
       */
 	  
 	  
