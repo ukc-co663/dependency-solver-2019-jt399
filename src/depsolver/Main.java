@@ -96,6 +96,7 @@ public class Main {
     
     String packageName = "";
     String packageVersion = "";
+    String currentPackage = "";
 	 
 	  
     boolean finished = false;
@@ -244,30 +245,97 @@ public class Main {
         if (IndexCount.size() > 0) 
         {
             int pacIndex = IndexCount.get(0);
-            System.out.println("Package: " + Packages.get(pacIndex));
+            //System.out.println("Package: " + Packages.get(pacIndex));
+	    currentPackage = Packages.get(pacIndex);
         }
 		//System.out.println(Counter);
 		//System.out.println(IndexCount);
      }
+	   
+
+     if(!IndexCount.isEmpty())
+	{
+	    for (int a = 0; a < IndexCount.size(); a++) 
+            {
+                int pacIndex = IndexCount.get(a);
+                //PackageDependancies.get(pacIndex);
+		//System.out.println(pacIndex);
+		//System.out.println(Packages.get(pacIndex));
+		String indexPackage = Packages.get(pacIndex);
+		String packDep = PackageDependancies.get(indexPackage);
+		    
+		if(PackageDependancies.get(indexPackage) == null)
+		{
+			finished = true;
+
+			InstalledPackages.add(indexPackage);
+			CommandOutput = "";
+
+			CommandOutput += '"';
+			CommandOutput += '+';
+			CommandOutput += indexPackage;
+			CommandOutput += '"';
+			CommandList.add(CommandOutput);
+			System.out.println(CommandList);
+		}
+            }
+	}
      
 }
 	  
+     public int solveIndex(String currentPackage)
+     {
+        for (int i = 0; i < PackageNames.size(); i++) 
+	{
+	   posConFind = PackageDependancies.get(currentPackage)
+	   pacName = PackageNames.get(i);
+	   if(posConFind.equals(pacName))
+	   {
+		//System.out.println("Found: " + posConFind + " at index: "+ Index);
+		IndexCount.add(Index);
+		Counter ++;
+		Index ++;
+	    }
+	    if (IndexCount.size() > 0) 
+            {
+            	pacIndex = IndexCount.get(0);
+            	//System.out.println("Package: " + Packages.get(pacIndex));
+	    	currentPackage = Packages.get(pacIndex);
+            }
+	 }
+     }
 	  
-      System.out.println(Packages);
+     public String solvePackage(String currentPackage)
+     {
+        if(PackageDependancies.get(currentPackage))
+	{
+		PossiblePath.push('"' + '+' + currentPackage + '"');
+	}
+     }
+	  
+     /*   
+      *   The idea was to try and follow what I list below in comments. (The very bottom).
+      *   I really struggled to utilise github so ended up doing most of my work on paper and Eclipse to test things.
+      *   Ontop of this, I have been cripplingly sick and have struggled to work on this project, despite the hours I have put into it.
+      */
+	  
+	  
+	  
+      //System.out.println(Packages);
       //System.out.println(PackageNames);	    
       //System.out.printf("  cons:");
       //System.out.printf(" %s", conflictsSeparated);
       //System.out.printf("\n");
       //System.out.print(CommandList);
       //System.out.println(constraints);
-      System.out.println(PositiveCons);
+      //System.out.println(PositiveCons);
       //System.out.println(NegativeCons);
       //System.out.println(IndexCount);
       //System.out.print(ValidPackages);   
-      System.out.println(PackageConflicts);
-      System.out.println(PackageDependancies);
+      //System.out.println(PackageConflicts);
+      //System.out.println(PackageDependancies);
       //System.out.println(PackageDeps);
-      System.out.println(PackageDependancies.get("A=1"));
+      //System.out.println(PackageDependancies.get("A=1"));
   }
 
   static String readFile(String filename) throws IOException {
@@ -277,3 +345,66 @@ public class Main {
     return sb.toString();
   }
 }
+
+//Initial population is empty, skip.
+
+//Constraints Found
+
+//PositiveCons found.
+//PositiveCon A
+
+//No NegativeCons found.
+
+//Find all the packages with name A
+//1 package found, A=1
+
+//Package A=1 has dependancies
+//B
+//C
+//Package A=1 has no conflicts
+
+//Add A to current path
+//Add "+A=1" to stack.
+
+//Try to install B=2
+//B=2 has no conflicts
+//B=2 has dependancies
+//C
+//D
+//Add "+B=2" to stack.
+
+//Try to install C=3
+//C=3 has no conflicts
+//C=3 has dependancies
+//D
+//E
+//Add "+C=3" to stack.
+
+//Try to install D=0
+//D=0 has no conflicts
+//D=0 has dependancies
+//E
+//F
+//Add "+D=0" to stack.
+
+//Try to install E=8
+//E=8 has no conflicts
+//E=8 has conflicts.
+//Is F installed in installedPackages? No.
+//Is F inside the stack? No.
+//E=8 has dependancies
+//G
+//Add "+E=8" to stack.
+
+//Try to install G
+//G=7 has no conflicts
+//G=7 has dependancies
+//I
+//Add "+G=7" to stack.
+
+//Try to install I
+//I=9 has no conflicts
+//I=9 has no dependancies
+//I may be installed, add "+I=9" to stack
+//Output Stack into CommandsList
+
