@@ -239,46 +239,16 @@ public class Main {
                         Index ++;
                     }
                  }
-        
+        // pacIndex is current package we have installed.
         for (int i = 0; i < IndexCount.size(); i++) 
         {
             int pacIndex = IndexCount.get(i);
-            //System.out.println("Package: " + Packages.get(pacIndex));
+            System.out.println("Package: " + Packages.get(pacIndex));
         }
 		//System.out.println(Counter);
 		//System.out.println(IndexCount);
      }
-	   
-	   
-	 
-	   
-	if(!IndexCount.isEmpty())
-	{
-	    for (int a = 0; a < IndexCount.size(); a++) 
-            {
-                int pacIndex = IndexCount.get(a);
-                //PackageDependancies.get(pacIndex);
-		//System.out.println(pacIndex);
-		//System.out.println(Packages.get(pacIndex));
-		String indexPackage = Packages.get(pacIndex);
-		String packDep = PackageDependancies.get(indexPackage);
-		    
-		if(PackageDependancies.get(indexPackage) == null)
-		{
-			finished = true;
-
-			InstalledPackages.add(indexPackage);
-			CommandOutput = "";
-
-			CommandOutput += '"';
-			CommandOutput += '+';
-			CommandOutput += indexPackage;
-			CommandOutput += '"';
-			CommandList.add(CommandOutput);
-			System.out.println(CommandList);
-		}
-            }
-	}
+     
 }
 	  
 	  
