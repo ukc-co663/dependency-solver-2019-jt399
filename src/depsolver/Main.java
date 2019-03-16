@@ -100,11 +100,11 @@ public class Main {
 	    
       for (List<String> clause : p.getDepends()) 
       {
+	PackageDeps = new ArrayList<String>();
 	if(p.getDepends() == empty)
 	{
 	    PackageDeps.add('*');
 	}
-	PackageDeps = new ArrayList<String>();
         //System.out.printf("  deps:");
         for (String q : clause) 
 	{ have
