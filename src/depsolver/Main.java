@@ -205,7 +205,8 @@ public class Main {
 	        for (int k = 0; k < PackageNames.size(); k++) 
                 {
                     String pacName = PackageNames.get(k);
-                    if("A" == pacName)
+		    System.out.println(pacName); // DOES IT GET HERE
+                    if(posConFind == pacName)
                     {
                         Counter ++;
                         Index ++;
