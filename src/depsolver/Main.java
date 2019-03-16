@@ -101,15 +101,15 @@ public class Main {
       for (List<String> clause : p.getDepends()) 
       {
 	String depsBuilder = "";
-        System.out.printf("  deps:");
+        //System.out.printf("  deps:");
         for (String q : clause) 
 	{
 	   depsBuilder += q;
 	   //System.out.printf(" %s", q); // What does it have
-	   //PackageDeps.add(depsBuilder);
-	   //depsBuilder += '|';
+	   PackageDeps.add(depsBuilder);
+	   depsBuilder += '|';
            //PackageDeps.add(q);
-           System.out.printf(" %s", q);
+           //System.out.printf(" %s", q);
         }
 	//listList.add(PackageDeps);
 	//PackageDeps.clear();
