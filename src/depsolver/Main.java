@@ -107,7 +107,7 @@ public class Main {
 	}
         //System.out.printf("  deps:");
         for (String q : clause) 
-	{ have
+	{
 	   PackageDeps.add(q);
            //System.out.printf(" %s", q);
         }
