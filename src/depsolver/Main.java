@@ -204,6 +204,8 @@ public class Main {
 		for (int i = 0; i < PackageNames.size(); i++) 
                 {
                    String pacName = PackageNames.get(i);
+	           System.out.println(posConFind);
+	           System.out.println(pacName);
                    if(posConFind == pacName)
                    {
                     	Counter ++;
