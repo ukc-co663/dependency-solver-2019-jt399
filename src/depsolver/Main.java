@@ -92,6 +92,7 @@ public class Main {
 
     // ArryaList for holding list of commands used during run of program.
     ArrayList<String> CommandList = new ArrayList<String>();
+    String CommandOutput = "";
     
     String packageName = "";
 	  
