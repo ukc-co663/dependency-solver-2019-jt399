@@ -113,9 +113,9 @@ public class Main {
         }
 	//listList.add(PackageDeps);
 	//PackageDeps.clear();
-        //System.out.println(PackageDeps);	 
+        System.out.println(PackageDeps);	 
 	//System.out.println(listList);	
-        //System.out.printf("\n");
+        System.out.printf("\n");
       }
       
       String conflictsSeparated = String.join(",", p.getConflicts());
