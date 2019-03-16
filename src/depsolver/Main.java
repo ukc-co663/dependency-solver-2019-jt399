@@ -200,12 +200,12 @@ public class Main {
 	{
 	    posConFind = PositiveCons.get(j);
 	    System.out.println(posConFind); // DOES IT GET HERE
-	    if(PackageNames.contains("A"))
+	    if(PackageNames.contains(posConFind))
 	    {
 	        for (int k = 0; k < PackageNames.size(); k++) 
                 {
                     String pacName = PackageNames.get(k);
-                    if(posConFind == pacName)
+                    if("A" == pacName)
                     {
                         Counter ++;
                         Index ++;
